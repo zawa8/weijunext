@@ -17,27 +17,18 @@ export default function DeveloperCard() {
               @weijunext
             </p>
             <div className="flex gap-2 pb-1 pt-2">
-              <Chip variant="flat">👨‍💻前端</Chip>
-              <Chip variant="flat">🛠️全栈</Chip>
+              <Chip variant="flat">👨‍💻frontend</Chip>
+              <Chip variant="flat">🛠️fullstAck</Chip>
               <Chip variant="flat">✨AI</Chip>
-              <Chip variant="flat">⛵️出海</Chip>
+              <Chip variant="flat">⛵️fonts</Chip>
             </div>
             <p className="py-2 text-small text-foreground">
-              Next.js开源手艺人｜掘金签约作者｜出海鼓励师
+              Hscii fonts keypAd transliterator 8fiNger mAThs
             </p>
             <div className="w-full text-center mt-4 flex justify-evenly">
-              <FollowButton
-                name="Twitter/X"
-                href="https://twitter.com/weijunext/"
-              ></FollowButton>
-              <FollowButton
-                name="Github"
-                href="https://github.com/weijunext/"
-              ></FollowButton>
-              <FollowButton
-                name="掘金"
-                href="https://juejin.cn/user/26044008768029"
-              ></FollowButton>
+              <FollowButton name="x.com/etphor" href="https://x.com/etphor/" ></FollowButton>
+              <FollowButton name="gitHub" href="https://github.com/zava8/" ></FollowButton>
+              <FollowButton name="fb.com/ztrabc" href="https://fb.com/ztrabc" ></FollowButton>
             </div>
           </div>
         </CardBody>

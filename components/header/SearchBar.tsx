@@ -16,75 +16,25 @@ const SearchBar = ({ posts }: { posts: WeeklyPost[] }) => {
   const [show, setShow] = useState(false);
   const [error, setError] = useState(false);
   const [results, setResults] = useState<SearchResult[]>([]);
-
   createIndex({ documents: posts });
-
-  /**
-   * 处理搜索输入的变化
-   * Handle the change of search input
-   * @param value 搜索输入的值 The value of the search input
-   */
   const handleChange = useCallback(
     async (value: string) => {
       setQuery(value);
-      if (loading) {
-        return;
-      }
+      if (loading) { return; }
       setLoading(true);
-      try {
-        handleSearch(value);
-      } catch (e) {
-        setError(true);
-      }
+      try { handleSearch(value); } catch (e) { setError(true); }
       setLoading(false);
     },
     [loading]
   );
-
-  /**
-   * 处理搜索输入框的变化事件
-   * Handle the change event of the search input
-   * @param e 变化事件 The change event
-   */
-  const onChangeSearch = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { value } = e.target;
-    handleChange(value);
-    setShow(Boolean(value));
-  };
-
-  /**
-   * 执行搜索
-   * Perform the search
-   * @param value 搜索关键词 The search keyword
-   */
-  const handleSearch = async (value: string) => {
-    const searchResults: SearchResult[] = await doSearch(value);
-    setResults(searchResults);
-  };
-
-  /**
-   * 完成搜索
-   * Finish the search
-   */
-  const finishSearch = useCallback(() => {
-    handleChange("");
-    setShow(false);
-  }, [handleChange]);
+  const onChangeSearch = (e: React.ChangeEvent<HTMLInputElement>) => { const { value } = e.target; handleChange(value); setShow(Boolean(value)); };  
+  const handleSearch = async (value: string) => { const searchResults: SearchResult[] = await doSearch(value); setResults(searchResults); };
+  const finishSearch = useCallback(() => { handleChange(""); setShow(false); }, [handleChange]);
 
   return (
     <>
-      <Input
-        value={query}
-        onChange={onChangeSearch}
-        onFocus={() => {
-          setShow(true);
-        }}
-        onBlur={() => {
-          setShow(false);
-        }}
-        placeholder="Search……"
-        className="border-gray-600 focus:border-0 rounded-full"
-      />
+	  <Input value={query} onChange={onChangeSearch} onFocus={() => { setShow(true); }} onBlur={() => { setShow(false); }} 
+		placeholder="Search……" className="border-gray-600 focus:border-0 rounded-full" />
 
       <Transition
         show={show}
@@ -103,9 +53,7 @@ const SearchBar = ({ posts }: { posts: WeeklyPost[] }) => {
             "min-h-[100px] max-h-[400px]",
             "w-[90vw] sm:w-[400px]"
           )}
-          style={{
-            transition: "max-height .2s ease", // don't work with tailwindcss
-          }}
+          style={{ transition: "max-height .2s ease", }}
         >
           {error ? (
             <span className="block select-none p-8 text-center text-sm text-gray-400">
@@ -113,12 +61,7 @@ const SearchBar = ({ posts }: { posts: WeeklyPost[] }) => {
             </span>
           ) : results && results.length > 0 ? (
             results.map((result, index) => (
-              <Link
-                key={`${result.id}_${index}`}
-                // get the right url
-                href={`/weekly/${result.id.split("_")[0]}`}
-                onClick={finishSearch}
-              >
+			  <Link key={`${result.id}_${index}`} href={`/weekly/${result.id.split("_")[0]}`} onPress={finishSearch} >
                 <li
                   className={cn(
                     "break-words rounded-md cursor-default select-none",
@@ -141,9 +84,7 @@ const SearchBar = ({ posts }: { posts: WeeklyPost[] }) => {
               </Link>
             ))
           ) : (
-            <span className="block select-none p-8 text-center text-sm text-gray-400">
-              No results found.
-            </span>
+			<span className="block select-none p-8 text-center text-sm text-gray-400"> no results found. </span>
           )}
         </ul>
       </Transition>

@@ -37,16 +37,16 @@ export default function CustomDocSearch() {
 
   return (
     <>
-      <button className="docSearch-btn" data-variant="large" onClick={onOpen}>
+      <button className="docSearch-btn" data-variant="large" onPress={onOpen}>
         搜索文档<kbd>{isMac ? "⌘K" : "Ctrl+K"}</kbd>
       </button>
-      <button className="docSearch-btn" data-variant="medium" onClick={onOpen}>
+      <button className="docSearch-btn" data-variant="medium" onPress={onOpen}>
         搜索<kbd>{isMac ? "⌘K" : "Ctrl+K"}</kbd>
       </button>
       <button
         className="docSearch-btn mr-2 hover:bg-accent border border-gray-300"
         data-variant="small"
-        onClick={onOpen}
+        onPress={onOpen}
       >
         <IoIosSearch />
       </button>
