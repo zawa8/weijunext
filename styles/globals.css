@@ -1,5 +1,5 @@
 @import './scrollbar.css';
-@import url('https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-webfont/1.6.0/style.min.css');
+/*@import url('https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-webfont/1.6.0/style.min.css');*/
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -98,7 +98,7 @@ html {
   }
   body {
     @apply bg-background text-foreground;
-    font-family: "LXGW WenKai", sans-serif;
+    font-family: "ing115", sans-serif;
   }
 }
 .link-hover {
