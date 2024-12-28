@@ -7,7 +7,7 @@ export function ThemedButton() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <div onPress={() => setTheme(theme === "light" ? "dark" : "light")}>
+    <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
       {theme === "light" ? <PhMoonFill /> : <PhSunBold />}
     </div>
   );
