@@ -46,7 +46,7 @@ export default function CustomDocSearch() {
       <button
         className="docSearch-btn mr-2 hover:bg-accent border border-gray-300"
         data-variant="small"
-        onPress={onOpen}
+        onClick={onOpen}
       >
         <IoIosSearch />
       </button>
