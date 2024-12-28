@@ -61,7 +61,7 @@ const SearchBar = ({ posts }: { posts: WeeklyPost[] }) => {
             </span>
           ) : results && results.length > 0 ? (
             results.map((result, index) => (
-			  <Link key={`${result.id}_${index}`} href={`/weekly/${result.id.split("_")[0]}`} onPress={finishSearch} >
+			  <Link key={`${result.id}_${index}`} href={`/weekly/${result.id.split("_")[0]}`} onClick={finishSearch} >
                 <li
                   className={cn(
                     "break-words rounded-md cursor-default select-none",
