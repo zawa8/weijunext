@@ -1,4 +1,3 @@
-import BaiDuAnalytics from "@/app/BaiDuAnalytics";
 import GoogleAnalytics from "@/app/GoogleAnalytics";
 import Footer from "@/components/footer/Footer";
 import Header from "@/components/header/Header";
@@ -27,14 +26,14 @@ export default async function RootLayout({ children, }: { children: React.ReactN
     <html lang="en" suppressHydrationWarning>
       <head />
       <body className={`${ing115_font.className} min-h-screen bg-background antialiased`}>
-		<ThemeProvider attribute="class" enableSystem={false} defaultTheme={siteConfig.defaultNextTheme} forcedTheme={siteConfig.defaultNextTheme} >
+        <ThemeProvider attribute="class" enableSystem={false} defaultTheme={siteConfig.defaultNextTheme} forcedTheme={siteConfig.defaultNextTheme} >
           <Header posts={posts} />
           <main className="flex flex-col items-center py-6">{children}</main>
           <Footer />
           <Analytics />
           <TailwindIndicator />
         </ThemeProvider>
-		{process.env.NODE_ENV === "development" ? ( <></> ) : ( <> <GoogleAnalytics /> </> )}
+        {process.env.NODE_ENV === "development" ? (<></>) : (<> <GoogleAnalytics /> </>)}
       </body>
     </html>
   );
