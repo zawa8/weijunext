@@ -11,7 +11,7 @@ import "@/styles/loading.css";
 import { PostsByMonth, WeeklyPost } from "@/types/weekly";
 import { Analytics } from "@vercel/analytics/react";
 import { Viewport } from "next";
-
+import {ing115_font} from "@/components/lifonts/lifonts";
 export const metadata = {
   ...siteConfig,
   title: siteConfig.name,
@@ -21,38 +21,20 @@ export const viewport: Viewport = {
   themeColor: siteConfig.themeColors,
 };
 
-export default async function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const { posts }: { posts: WeeklyPost[]; postsByMonth: PostsByMonth } =
-    await getWeeklyPosts();
-
+export default async function RootLayout({ children, }: { children: React.ReactNode; }) {
+  const { posts }: { posts: WeeklyPost[]; postsByMonth: PostsByMonth } = await getWeeklyPosts();
   return (
     <html lang="en" suppressHydrationWarning>
       <head />
-      <body className="min-h-screen bg-background antialiased">
-        <ThemeProvider
-          attribute="class"
-          enableSystem={false}
-          defaultTheme={siteConfig.defaultNextTheme}
-          forcedTheme={siteConfig.defaultNextTheme}
-        >
+      <body className={`${ing115_font.className} min-h-screen bg-background antialiased`}>
+		<ThemeProvider attribute="class" enableSystem={false} defaultTheme={siteConfig.defaultNextTheme} forcedTheme={siteConfig.defaultNextTheme} >
           <Header posts={posts} />
           <main className="flex flex-col items-center py-6">{children}</main>
           <Footer />
           <Analytics />
           <TailwindIndicator />
         </ThemeProvider>
-        {process.env.NODE_ENV === "development" ? (
-          <></>
-        ) : (
-          <>
-            <GoogleAnalytics />
-            <BaiDuAnalytics />
-          </>
-        )}
+		{process.env.NODE_ENV === "development" ? ( <></> ) : ( <> <GoogleAnalytics /> </> )}
       </body>
     </html>
   );

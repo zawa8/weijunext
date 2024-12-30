@@ -4,26 +4,16 @@ import { MdEmail } from "react-icons/md";
 import { SiBuymeacoffee, SiJuejin } from "react-icons/si";
 
 const baseSiteConfig = {
-  name: "Weekly Boilerplate",
+  name: "weekly boilerplate",
   description:
-    "Weekly Boilerplate is a carefully crafted weekly newsletter website template, implemented using Next.js + MDX.",
+    "weekly boilerplate is a carefully crafted weekly newsletter website template, implemented using next.js + mdx.",
   url: "https://weekly.weijunext.com",
   metadataBase: '/',
   keywords: ["open-source weekly"],
-  authors: [
-    {
-      name: "weijunext",
-      url: "https://weijunext.com",
-      twitter: 'https://twitter.com/weijunext',
-    }
-  ],
+  authors: [ { name: "weijunext", url: "https://weijunext.com", twitter: 'https://twitter.com/weijunext', } ],
   creator: '@weijunext',
   defaultNextTheme: 'dark', // next-theme option: system | dark | light
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
-  },
+  icons: { icon: "/favicon.ico", shortcut: "/logo.png", apple: "/logo.png", },
   headerLinks: [
     { name: 'repo', href: "https://github.com/weijunext/weekly-boilerplate", icon: BsGithub },
     { name: 'twitter', href: "https://twitter.com/weijunext", icon: BsTwitterX },

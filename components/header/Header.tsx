@@ -6,7 +6,8 @@ import { siteConfig } from "@/config/site";
 import { WeeklyPost } from "@/types/weekly";
 import Image from "next/image";
 import Link from "next/link";
-import FontPicker from "./FontPicker";
+import FontPicker from "@/components/lifonts/lifonts";
+
 const Header = ({ posts }: { posts: WeeklyPost[] }) => {
   return (
     <header className="mx-auto max-w-5xl px-4 py-3 border-b border-gray-600 sticky top-0 bg-background z-50">

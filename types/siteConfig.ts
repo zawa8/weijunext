@@ -1,23 +1,9 @@
 import { IconType } from "react-icons"
 
-export type AuthorsConfig = {
-  name: string
-  url: string
-  twitter?: string
-}
-export type ProductLink = {
-  url: string
-  name: string
-}
-export type Link = {
-  name: string
-  href: string
-  icon: IconType
-}
-export type ThemeColor = {
-  media: string
-  color: string
-}
+export type AuthorsConfig = { name: string url: string twitter?: string }
+export type ProductLink = { url: string name: string }
+export type Link = { name: string href: string icon: IconType }
+export type ThemeColor = { media: string color: string }
 export type SiteConfig = {
   name: string
   description: string
@@ -32,11 +18,7 @@ export type SiteConfig = {
   metadataBase: URL | string
   themeColors?: string | ThemeColor[]
   defaultNextTheme?: string
-  icons: {
-    icon: string
-    shortcut?: string
-    apple?: string
-  }
+  icons: { icon: string shortcut?: string apple?: string }
   openGraph?: {
     type: string
     locale: string
