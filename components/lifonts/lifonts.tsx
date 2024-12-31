@@ -23,8 +23,8 @@ const FontPicker: React.FC = () => {
     document.body.className = '';
     const v_to_f = (sval: string): string => {
       switch (sval) {
-		case '0': return binaryvertical115_font.className;
-		case '1': return hin115_font.className;
+        case '0': return binaryvertical115_font.className;
+        case '1': return hin115_font.className;
         case '2': return eng115_font.className;
         case '3': return ing115_font.className;
         case '4': return sinhala115_font.className;
@@ -37,7 +37,7 @@ const FontPicker: React.FC = () => {
         case 'J': return bangla115_font.className;
         case 'B': return gurmukhi115_font.className;
         case 'W': return hex115_font.className;
-        case 'E': return guzrati115_font.className;        
+        case 'E': return guzrati115_font.className;
         default: return ing115_font.className;
       }
     }
@@ -129,4 +129,16 @@ f
 ㄱ	기역	giyeok
 ㅊ	치읓	chieut
 ㅋ	키읔	kieuk
+/////////giscus font style
+.markdown .g-emoji {
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  font-weight: 400;
+}
+.markdown .footnotes .data-footnote-backref .g-emoji {
+  font-family: monospace;
+}
+const list = document.getElementsByClassName("markdown");
+for (var i = 0; i < list.length; ++i) {
+  list[i].style.fontFamily = "ing115_font";
+}
 */
