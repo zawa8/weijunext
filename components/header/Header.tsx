@@ -19,15 +19,14 @@ const Header = ({ posts }: { posts: WeeklyPost[] }) => {
           </Link>
           <div className="hidden md:flex md:gap-x-6"></div>
         </div>
-
         <div className="flex items-center">
-          {/* <SearchBar posts={posts} /> */}
-          {docSearchConfig.docSearch.appId ? <DocSearch /> : <></>}
-
-          <HeaderLinks />
-          {/* <ThemedButton /> */}
+			<HeaderLinks />
+			{/* <SearchBar posts={posts} /> */}
+			{docSearchConfig.docSearch.appId ? <DocSearch /> : <></>}       
+			{/* <ThemedButton /> */}
+			<FontPicker />
         </div>
-       <FontPicker />
+       
       </nav>
     </header>
   );

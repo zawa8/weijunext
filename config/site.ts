@@ -1,35 +1,34 @@
 import { SiteConfig } from "@/types/siteConfig";
-import { BsGithub, BsTwitterX, BsWechat } from "react-icons/bs";
+import { BsGithub, BsTwitterX} from "react-icons/bs";
 import { MdEmail } from "react-icons/md";
 import { SiBuymeacoffee, SiJuejin } from "react-icons/si";
 
 const baseSiteConfig = {
-  name: "weekly boilerplate",
+  name: "hex8 smAchAr",
   description:
-    "weekly boilerplate is a carefully crafted weekly newsletter website template, implemented using next.js + mdx.",
-  url: "https://weekly.weijunext.com",
+    "hex8 smAchAr bhArAT/asiA ki phonetic laNguages scripts me fontpicker ke sATh",
+  url: "https://hex8.vercel.app",
   metadataBase: '/',
-  keywords: ["open-source weekly"],
-  authors: [ { name: "weijunext", url: "https://weijunext.com", twitter: 'https://twitter.com/weijunext', } ],
-  creator: '@weijunext',
+  keywords: ["HinDi bANgla Tamil kannadA news"],
+  authors: [ { name: "vimalkumAr", url: "https://zava8.github.io", twitter: 'https://x.com/etphor', } ],
+  creator: '@viimalkumAr',
   defaultNextTheme: 'dark', // next-theme option: system | dark | light
   icons: { icon: "/favicon.ico", shortcut: "/logo.png", apple: "/logo.png", },
   headerLinks: [
-    { name: 'repo', href: "https://github.com/weijunext/weekly-boilerplate", icon: BsGithub },
-    { name: 'twitter', href: "https://twitter.com/weijunext", icon: BsTwitterX },
+    { name: 'repo', href: "https://github.com/zava810/hex8", icon: BsGithub },
+    { name: 'twitter', href: "https://x.com/etphor", icon: BsTwitterX },
     { name: 'buyMeCoffee', href: "https://www.buymeacoffee.com/weijunext", icon: SiBuymeacoffee }
   ],
   footerLinks: [
-    { name: 'email', href: "mailto:weijunext@gmail.com", icon: MdEmail },
-    { name: 'twitter', href: "https://twitter.com/weijunext", icon: BsTwitterX },
-    { name: 'github', href: "https://github.com/weijunext/", icon: BsGithub },
+    { name: 'email', href: "mailto:vimalkg@gmail.com", icon: MdEmail },
+    { name: 'twitter', href: "https://x.com/etphor", icon: BsTwitterX },
+    { name: 'github', href: "https://github.com/zava810/", icon: BsGithub },
     { name: 'buyMeCoffee', href: "https://www.buymeacoffee.com/weijunext", icon: SiBuymeacoffee },
     { name: 'juejin', href: "https://juejin.cn/user/26044008768029", icon: SiJuejin },
-    { name: 'weChat', href: "https://weijunext.com/make-a-friend", icon: BsWechat }
   ],
   footerProducts: [
-    { url: 'https://weijunext.com/', name: 'J实验室' },
-    { url: 'https://nextjscn.org/', name: 'Next.js 中文文档' },
+    { url: 'https://fb.com/ztrabc', name: 'ztrabc' },
+    { url: 'https://fb.com/8fgrm/', name: '8fgrm' },
     { url: 'https://nextjs.weijunext.com/', name: 'Next.js Practice' },
     { url: 'https://PHCopilot.AI/', name: 'Product Hunt Copilot' },
     { url: 'https://smartexcel.cc/', name: 'Smart Excel' },

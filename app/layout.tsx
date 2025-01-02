@@ -11,14 +11,9 @@ import { PostsByMonth, WeeklyPost } from "@/types/weekly";
 import { Analytics } from "@vercel/analytics/react";
 import { Viewport } from "next";
 import {ing115_font} from "@/components/lifonts/lifonts";
-export const metadata = {
-  ...siteConfig,
-  title: siteConfig.name,
-};
+export const metadata = { ...siteConfig, title: siteConfig.name, };
 
-export const viewport: Viewport = {
-  themeColor: siteConfig.themeColors,
-};
+export const viewport: Viewport = { themeColor: siteConfig.themeColors, };
 
 export default async function RootLayout({ children, }: { children: React.ReactNode; }) {
   const { posts }: { posts: WeeklyPost[]; postsByMonth: PostsByMonth } = await getWeeklyPosts();
