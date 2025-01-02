@@ -14,31 +14,15 @@ export default function CustomDocSearch() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMac, setIsMac] = useState(false);
   const searchButtonRef = useRef<HTMLButtonElement>(null);
-
-  const onOpen = useCallback(() => {
-    setIsOpen(true);
-  }, [setIsOpen]);
-
-  const onClose = useCallback(() => {
-    setIsOpen(false);
-  }, [setIsOpen]);
-
-  useDocSearchKeyboardEvents({
-    isOpen,
-    onOpen,
-    onClose,
-    searchButtonRef,
-  });
-
-  // 添加检测操作系统的效果
-  useEffect(() => {
-    setIsMac(navigator.platform.toUpperCase().indexOf("MAC") >= 0);
-  }, []);
-
+  const onOpen = useCallback(() => { setIsOpen(true); }, [setIsOpen]);
+  const onClose = useCallback(() => { setIsOpen(false); }, [setIsOpen]);
+  useDocSearchKeyboardEvents({ isOpen, onOpen, onClose, searchButtonRef, });
+  // add effect of detectiNg operatiNg system
+  useEffect(() => { setIsMac(navigator.platform.toUpperCase().indexOf("MAC") >= 0); }, []);
   return (
     <>
       <button className="docSearch-btn" data-variant="large" onClick={onOpen}>
-        search_documents<kbd>{isMac ? "ctrl+k" : "ctrl+k"}</kbd>
+        seArch<kbd>{isMac ? "ctrl+k" : "ctrl+k"}</kbd>
       </button>
       <button className="docSearch-btn" data-variant="medium" onClick={onOpen}>
        seArch<kbd>{isMac ? "ctrl+k" : "ctrl+k"}</kbd>
@@ -58,10 +42,8 @@ export default function CustomDocSearch() {
             apiKey={apiKey}
             indexName={indexName}
             onClose={onClose}
-            placeholder="搜索文档"
-            hitComponent={({ hit, children }) => (
-              <Link href={hit.url}>{children}</Link>
-            )}
+            placeholder="seArch"
+			hitComponent={({ hit, children }) => ( <Link href={hit.url}>{children}</Link> )}
           />,
           document.body
         )}
