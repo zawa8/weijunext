@@ -3,17 +3,17 @@ title: open source weekly ANk 2
 slug: 2024-02-12-002
 date: 2024-02-12
 ---
-# `@scope`定义和作用
+# `@scope`definition and function
 
-**`@scope`** 是一个CSS的块级规则，它允许你创建一个作用域，这个作用域定义了一组样式规则应用的特定区域。说到这里是不是让你想到了Less和SCSS的作用域？没错，它们的“作用域”是一个概念。
+**`@scope`** is a css block-level rule that allows you to create a scope that defines a specific areA to which a set of style rules apply. does this remind you of the scope of less and scss? yes, their "scope" is a concept.
 
-## 基本使用
+## basic use
 
-作用域由两部分组成：**作用域根**和**作用域限制**。
+scope consists of two pArts：**scope root** and **scope limit**。
 
-- **作用域根(\<scope-start\>)：**定义样式开始应用的节点
-- **作用域限制(\<scope-end\>)（可选）：**定义不受作用域影响的节点
-- **样式规则（\<rule-list\>）**：**`@scope`** 内定义的样式
+- **scope root (\<scope-start\>): **defines the node where the style starts to be applied
+- **scope restriction (\<scope-end\>) (optional): **Define nodes that are not affected by the scope
+- **style rules (\<rule-list\>)**: styles defined within **`@scope`**
 
 ```css
 @scope [(<scope-start>)]? [to (<scope-end>)]? {
@@ -21,9 +21,9 @@ date: 2024-02-12
 }
 ```
 
-**示例1：使用作用域根**
+**Example 1: Using Scope Root**
 
-假设你有一个博客文章页面，它包含一个文章区块和一个评论区块。你想让这两个区块中的链接有不同的颜色。
+Let's say you have a blog post page that contains a post section and a comments section. You want the links in these two blocks to be different colors.
 
 ```css
 /* 为文章区块定义一个作用域 */
@@ -124,7 +124,7 @@ https://codepen.io/yohopi/pen/VwgGooo
 
 # 结语
 
-**`@scope`** 规则的引入是CSS发展中的一次重要进步，虽然现在浏览器支持度还不够高，但对于这样重要的特性，显然不会让开发者等太久，相信很快主流浏览器都会支持的。
+**`@scope`** The introduction of rules is an important progress in the development of CSS. Although browser support is not yet high enough, developers will obviously not wait too long for such an important feature. I believe that mainstream browsers will soon support it.
 
 ![1.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/ab72d779-85ad-4978-9841-30adbe46383a/83ecaef2-a2ed-42cb-a7ad-ff2182b4b7e5/1.png)
 
