@@ -6,7 +6,7 @@ import { siteConfig } from "@/config/site";
 import { WeeklyPost } from "@/types/weekly";
 import Image from "next/image";
 import Link from "next/link";
-import FontPicker from "@/components/lifonts/lifonts";
+import FontPicker from "@/components/lifonts/lifp";
 
 const Header = ({ posts }: { posts: WeeklyPost[] }) => {
   return (
