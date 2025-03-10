@@ -8,7 +8,7 @@ declare -a vrcl_arr=(
 "/home/viml/mg/vrcl/zikis8/components/"
 "/home/viml/mg/vrcl/shenlu/components/" 
 "/home/viml/mg/vrcl/vrclblog/src/app/_components/"
-"/home/viml/mg/vrcl/vord8/components/"
+"/home/viml/mg/vrcl/word4/components/"
 "/home/viml/mg/vrcl/nxbunquiz/src/app/Components/"
 "/home/viml/mg/vrcl/chensonexsupabasesaasboiler/components/"
 "/home/viml/mg/vrcl/fpnxcustbill/app/ui/"
