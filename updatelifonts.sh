@@ -1,5 +1,7 @@
 #!/bin/bash
 ############################
+gitmsz1="mck82.vercel.app zikis8.vercel.app fb.com/ztrabc"
+############################
 vrclpath="/home/viml/mg/vrcl/"
 weijunext_path="/home/viml/mg/vrcl/weijunext/"
 weijunext_componentspath="/home/viml/mg/vrcl/weijunext/components/"
@@ -49,6 +51,7 @@ do
 	############################
 	if [ "$key" = 'g' ]; then
 		printf "pressed g so doiNg filling git add commit push ${i}\n"
+		printf "doiNg git add commit push ${i}\n"
 		git add . ; git commit -am "mck82.vercel.app zikis8.vercel.app fb.com/ztrabc" ; git push
 	else
 		printf "pressed other key.  so not doiNg git-commiting. please do git add-commit-push ${i} lateron \n"
