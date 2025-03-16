@@ -47,15 +47,15 @@ do
 	cd ${i}
 	############################
 	printf "current directory is : $(pwd)\n"
-	read -n1 -s -r -p $'Press g to git add commit push ${i}... or Ctrl+C to exit...\n' key
+	#read -n1 -s -r -p $'Press g to git add commit push ${i}... or Ctrl+C to exit...\n' key
 	############################
-	if [ "$key" = 'g' ]; then
-		printf "pressed g so doiNg filling git add commit push ${i}\n"
+	#if [ "$key" = 'g' ]; then
+		#printf "pressed g so doiNg filling git add commit push ${i}\n"
 		printf "doiNg git add commit push ${i}\n"
 		git add . ; git commit -am "mck82.vercel.app zikis8.vercel.app fb.com/ztrabc" ; git push
-	else
-		printf "pressed other key.  so not doiNg git-commiting. please do git add-commit-push ${i} lateron \n"
-	fi
+	#else
+		#printf "pressed other key.  so not doiNg git-commiting. please do git add-commit-push ${i} lateron \n"
+	#fi
 done
 ############################
 cd ${weijunext_path}
