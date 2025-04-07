@@ -2,47 +2,47 @@
 ############################
 gitmsz1="mck82.vercel.app zikis8.vercel.app fb.com/ztrabc"
 ############################
-vrclpath="/home/viml/mg/vrcl/"
-weijunext_path="/home/viml/mg/vrcl/weijunext/"
-weijunext_componentspath="/home/viml/mg/vrcl/weijunext/components/"
-declare -a vrcl_lifont_arr=(
-"/home/viml/mg/vrcl/mck_/mck82/components/"
-"/home/viml/mg/vrcl/mck_/mck81/components/"
-"/home/viml/mg/vrcl/zikis8/components/"
-"/home/viml/mg/vrcl/shenlu/components/" 
-"/home/viml/mg/vrcl/vrclblog/src/app/_components/"
-"/home/viml/mg/vrcl/word4/components/"
-"/home/viml/mg/vrcl/nxbunquiz/src/app/Components/"
-"/home/viml/mg/vrcl/chensonexsupabasesaasboiler/components/"
-"/home/viml/mg/vrcl/fpnxcustbill/app/ui/"
-"/home/viml/mg/vrcl/chatgpt_next_web/app/components/"
-"/home/viml/mg/vrcl/leeorb_mdx_blogsite/app/"
-"/home/viml/mg/vrcl/leeshadcn/components/"
+wrclpath="/home/viml/mg/wrcl/"
+weijunext_path="/home/viml/mg/wrcl/weijunext/"
+weijunext_componentspath="/home/viml/mg/wrcl/weijunext/components/"
+declare -a wrcl_lifont_arr=(
+"/home/viml/mg/wrcl/mck_/mck82/components/"
+"/home/viml/mg/wrcl/mck_/mck81/components/"
+"/home/viml/mg/wrcl/zikis8/components/"
+"/home/viml/mg/wrcl/shenlu/components/" 
+"/home/viml/mg/wrcl/wrclblog/src/app/_components/"
+"/home/viml/mg/wrcl/word4/components/"
+"/home/viml/mg/wrcl/nxbunquiz/src/app/Components/"
+"/home/viml/mg/wrcl/chensonexsupabasesaasboiler/components/"
+"/home/viml/mg/wrcl/fpnxcustbill/app/ui/"
+"/home/viml/mg/wrcl/chatgpt_next_web/app/components/"
+"/home/viml/mg/wrcl/leeorb_mdx_blogsite/app/"
+"/home/viml/mg/wrcl/leeshadcn/components/"
 )
 ############################
-for i in "${vrcl_lifont_arr[@]}"
+for i in "${wrcl_lifont_arr[@]}"
 do
 	rm -r ${i}/lifonts
 	cp -r ${weijunext_componentspath}/lifonts ${i}/
 done
 ############################
-declare -a vrcl_git_arr=(
-"/home/viml/mg/vrcl/weijunext/"
-"/home/viml/mg/vrcl/mck_/mck82/"
-"/home/viml/mg/vrcl/mck_/mck81/"
-"/home/viml/mg/vrcl/zikis8/"
-"/home/viml/mg/vrcl/shenlu/" 
-"/home/viml/mg/vrcl/vrclblog/"
-"/home/viml/mg/vrcl/word4/"
-"/home/viml/mg/vrcl/nxbunquiz/"
-"/home/viml/mg/vrcl/chensonexsupabasesaasboiler/"
-"/home/viml/mg/vrcl/fpnxcustbill/"
-"/home/viml/mg/vrcl/chatgpt_next_web/"
-"/home/viml/mg/vrcl/leeorb_mdx_blogsite/"
-"/home/viml/mg/vrcl/leeshadcn/"
+declare -a wrcl_git_arr=(
+"/home/viml/mg/wrcl/weijunext/"
+"/home/viml/mg/wrcl/mck_/mck82/"
+"/home/viml/mg/wrcl/mck_/mck81/"
+"/home/viml/mg/wrcl/zikis8/"
+"/home/viml/mg/wrcl/shenlu/" 
+"/home/viml/mg/wrcl/wrclblog/"
+"/home/viml/mg/wrcl/word4/"
+"/home/viml/mg/wrcl/nxbunquiz/"
+"/home/viml/mg/wrcl/chensonexsupabasesaasboiler/"
+"/home/viml/mg/wrcl/fpnxcustbill/"
+"/home/viml/mg/wrcl/chatgpt_next_web/"
+"/home/viml/mg/wrcl/leeorb_mdx_blogsite/"
+"/home/viml/mg/wrcl/leeshadcn/"
 )
 ############################
-for i in "${vrcl_git_arr[@]}"
+for i in "${wrcl_git_arr[@]}"
 do
 	cd ${i}
 	############################
