@@ -1,6 +1,6 @@
 #!/bin/bash
 ############################
-gitmsz1="mck82.vercel.app zikis8.vercel.app fb.com/ztrabc"
+gitmsz1="'zawa8.vercel.app mck82.vercel.app fb.com/ztrabc x.com/etphor'"
 ############################
 wrclpath="/home/viml/mg/wrcl/"
 weijunext_path="/home/viml/mg/wrcl/weijunext/"
@@ -39,24 +39,24 @@ declare -a wrcl_git_arr=(
 "/home/viml/mg/wrcl/fpnxcustbill/"
 "/home/viml/mg/wrcl/chatgpt_next_web/"
 "/home/viml/mg/wrcl/leeorb_mdx_blogsite/"
-"/home/viml/mg/wrcl/leeshadcn/"
+#"/home/viml/mg/wrcl/leeshadcn/"
 )
 ############################
-for i in "${wrcl_git_arr[@]}"
-do
-	cd ${i}
-	############################
-	printf "current directory is : $(pwd)\n"
-	#read -n1 -s -r -p $'Press g to git add commit push ${i}... or Ctrl+C to exit...\n' key
-	############################
-	#if [ "$key" = 'g' ]; then
-		#printf "pressed g so doiNg filling git add commit push ${i}\n"
+
+############################
+read -n1 -s -r -p $'Press g to git add commit push ${i}... or Ctrl+C to exit...\n' key
+if [ "$key" = 'g' ]; then
+	printf "pressed g so doiNg filling git add commit push ${i}\n"
+	for i in "${wrcl_git_arr[@]}"
+	do
+		cd ${i}
+		printf "current directory is : $(pwd)\n"
 		printf "doiNg git add commit push ${i}\n"
-		git add . ; git commit -am "mck82.vercel.app zikis8.vercel.app fb.com/ztrabc" ; git push
-	#else
-		#printf "pressed other key.  so not doiNg git-commiting. please do git add-commit-push ${i} lateron \n"
-	#fi
-done
+		git add . ; git commit -am 'zawa8.vercel.app mck82.vercel.app fb.com/ztrabc x.com/etphor' ; git push
+	done
+else
+	printf "pressed other key.  so no git-commit. please do git add-commit-push lateron \n"
+fi
 ############################
 cd ${weijunext_path}
 ############################
