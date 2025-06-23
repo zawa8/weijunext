@@ -2,11 +2,11 @@
 import DocSearch from "@/components/DocSearch";
 import { docSearchConfig } from "@/components/DocSearch/docSearch";
 import HeaderLinks from "@/components/header/HeaderLinks";
+import Fpicker2ts from "@/components/hsciifp/Fpicker2ts";
 import { siteConfig } from "@/config/site";
 import { WeeklyPost } from "@/types/weekly";
 import Image from "next/image";
 import Link from "next/link";
-import FontPicker from "@/components/lifonts/lifp";
 
 const Header = ({ posts }: { posts: WeeklyPost[] }) => {
   return (
@@ -20,13 +20,13 @@ const Header = ({ posts }: { posts: WeeklyPost[] }) => {
           <div className="hidden md:flex md:gap-x-6"></div>
         </div>
         <div className="flex items-center">
-			<HeaderLinks />
-			{/* <SearchBar posts={posts} /> */}
-			{docSearchConfig.docSearch.appId ? <DocSearch /> : <></>}       
-			{/* <ThemedButton /> */}
-			<FontPicker />
+          <HeaderLinks />
+          {/* <SearchBar posts={posts} /> */}
+          {docSearchConfig.docSearch.appId ? <DocSearch /> : <></>}
+          {/* <ThemedButton /> */}
+          <Fpicker2ts />
         </div>
-       
+
       </nav>
     </header>
   );
